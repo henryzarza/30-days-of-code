@@ -1,0 +1,110 @@
+:root {
+  --cod-gray: #191919;
+  --transition-duration: 290ms;
+  --transition-function: cubic-bezier(0.79, 0.01, 0.38, 0.99);
+  --white: #FFF;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(90deg, #FFA585 0%, #FFEDA0 100%);
+  overflow-x: hidden;
+}
+
+.main-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 75rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.title {
+  color: var(--cod-gray);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 2rem 0 5rem;
+  text-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+.card-container {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
+}
+
+.card {
+  border-radius: 0.25rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.25);
+  line-height: 0;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: box-shadow var(--transition-duration) var(--transition-function);
+  width: 100%;
+  will-change: box-shadow;
+}
+
+.card-img {
+  border-radius: 0.25rem;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-content {
+  background-color: var(--white);
+  border-radius: 0.25rem;
+  box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  margin: 0 auto;
+  padding: 1rem;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 70%;
+  transform: translateZ(0) scaleY(0);
+  transform-origin: top;
+  transition: transform var(--transition-duration) var(--transition-function);
+  width: 80%;
+}
+
+.card-title {
+  color: var(--cod-gray);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+}
+
+.card-description {
+  color: var(--cod-gray);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* Interactive */
+.card:hover {
+  box-shadow: 0.4rem 0.4rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card-content {
+  transform: translateZ(2rem) scaleY(1);
+}
+
+@media screen and (max-width: 50rem) {
+  .title {
+    margin-bottom: 2rem;
+  }
+}
