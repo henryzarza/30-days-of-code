@@ -8,3 +8,4 @@ I decided to do this challenge to practice, improve, and learn new things about 
 | Day | Name | Github | Demo |
 | ------ | ------ | ------ | ------ |
 | 1 | Face reconigtion shopping | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/face-recognition-shopping) | In your localhost 😄 |
+| 2 | 3D Parallax Card | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/3d-parallax-card) | [Codepen](https://codepen.io/HenryZarza/full/YzqYwRb) |
