@@ -7,4 +7,4 @@ I decided to do this challenge to practice, improve, and learn new things about 
 
 | Day | Name | Github | Demo |
 | ------ | ------ | ------ | ------ |
-| 1 | Face reconigtion shopping | [Github](https://github.com/henryzarza/30-days-of-code) | [Codepen](https://github.com/henryzarza/30-days-of-code) |
+| 1 | Face reconigtion shopping | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/face-recognition-shopping) | In your localhost 😄 |
