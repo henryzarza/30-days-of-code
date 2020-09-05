@@ -1,0 +1,36 @@
+.header {
+  border-bottom: 0.1rem solid var(--silver-tree);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 1rem 0;
+  width: var(--content-width);
+}
+
+.title {
+  color: var(--cod-gray);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.paragraph,
+.link {
+  color: var(--cod-gray);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.link {
+  color: var(--silver-tree);
+  margin: 0 0.25rem;
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.link:hover {
+  color: var(--cod-gray);
+  text-decoration: underline;
+}

@@ -1,9 +1,10 @@
 :root {
   --cod-gray: #191919;
-  --silver-tree: #71B69D;
+  --content-width: 75rem;
+  --red: #FF0070;
+  --silver-tree: #06D6A0;
   --transition-duration: 290ms;
   --transition-function: cubic-bezier(0.79, 0.01, 0.38, 0.99);
   --white: #FFF;
   --wild-sand: #F5F5F5;
-  --woodsmoke: #171D1D;
 }
