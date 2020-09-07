@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Theme colors */
+.main-content {
+  --bg-color: #091921;
+  --bg-color-dig: #191919;
+  --border-color: #091921;
+  --color-dig: #747475;
+  --hour-color: #FF105E;
+  --minute-color: #FFF;
+  --second-color: #FFF;
+  --shadow-1: -8px -8px 15px rgba(255, 255, 255, 0.05), 20px 20px 20px rgba(0, 0, 0, 0.3),
+  inset -8px -8px 15px rgba(255, 255, 255, 0.05), inset 20px 20px 20px rgba(0, 0, 0, 0.3);
+  --shadow-2: -5px -5px 20px rgba(0, 0, 0, 0.3), 5px 5px 20px rgba(0, 0, 0, 0.1),
+  inset -5px -5px 20px rgba(0, 0, 0, 0.3), inset 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main-content.light {
+  --bg-color: #D1DAE3;
+  --bg-color-dig: #E6EAEE;
+  --border-color: #CAD3DC;
+  --color-dig: #191919;
+  --hour-color: #E59017;
+  --minute-color: #191919;
+  --second-color: #008EFF;
+  --shadow-1: -8px -8px 15px rgba(255, 255, 255, 0.5), 10px 10px 10px rgba(0, 0, 0, 0.1),
+  inset -8px -8px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+  --shadow-2: -5px -5px 20px #FFF, 5px 5px 20px #BABECC, inset -5px -5px 20px #FFF,
+  inset 5px 5px 20px #BABECC;
+}
+/* End theme colors */
+
+.section {
+  align-items: center;
+  background-color: var(--bg-color-dig);
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.section:last-of-type {
+  background-color: var(--bg-color);
+}
+
+/* Digital */
+.digital-clock {
+  border: 0.5rem solid var(--bg-color-dig);
+  border-radius: 0.25rem;
+  box-shadow: var(--shadow-2);
+  padding: 2rem;
+}
+
+.dig-text {
+  color: var(--color-dig);
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.15;
+}
+/* End digital */
+
+/* Analog */
+.analog-clock {
+  align-items: center;
+  background-image: url('./clock.png');
+  background-size: cover;
+  border: 0.25rem solid var(--border-color);
+  border-radius: 50%;
+  box-shadow: var(--shadow-1);
+  display: flex;
+  height: 21.88rem;
+  justify-content: center;
+  position: relative;
+  width: 21.88rem;
+}
+
+.analog-clock::before {
+  background-color: var(--second-color);
+  border-radius: 50%;
+  content: '';
+  height: 0.9rem;
+  width: 0.9rem;
+  z-index: 1;
+}
+
+.hour,
+.minute,
+.second {
+  border-radius: 0.5rem;
+  bottom: 50%;
+  position: absolute;
+  transform-origin: bottom;
+}
+
+.hour {
+  background-color: var(--hour-color);
+  height: 5rem;
+  width: 0.5rem;
+}
+
+.minute {
+  background-color: var(--minute-color);
+  height: 5.62rem;
+  width: 0.25rem;
+}
+
+.second {
+  background-color: var(--second-color);
+  height: 6.88rem;
+  width: 0.125rem;
+}
+
+.second::before {
+  background-color: var(--second-color);
+  bottom: -1.875rem;
+  content: '';
+  height: 2.188rem;
+  position: absolute;
+  width: 100%;
+}
+/* End Analog */
+
+/* Checkbox change theme */
+.input {
+  display: none;
+}
+
+.input:checked + .label {
+  background: radial-gradient(#FFF 15%, transparent 16%), radial-gradient(#FFF 15%, transparent 16%);
+  background-color: #3D4145;
+  background-position: 0 0, 1.5rem 1.5rem;
+  background-size: 2.5rem 2.5rem;
+  border-color: #1E1E1D;
+}
+
+.input:checked + .label::after {
+  background-color: #FFF;
+  border-color: #E4E6CA;
+  transform: translateX(1.8rem);
+}
+
+.label {
+  background: linear-gradient(#FFF 50%, transparent 0) 0 0,
+  radial-gradient(circle closest-side, #FFF 53%, transparent 0) 0 0,
+  radial-gradient(circle closest-side, #FFF 50%, transparent 0) 3.5rem 0 #ADE1F8;
+  background-repeat: repeat-x;
+  background-size: 1rem 2rem;
+  border: 0.1rem solid #93C2D5;
+  border-radius: 2rem;
+  cursor: pointer;
+  height: 2.2rem;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  transition: all 290ms cubic-bezier(0.79, 0.01, 0.38, 0.99);
+  width: 4rem;
+  z-index: 2;
+}
+
+.label::after {
+  background-color: #FADF7E;
+  border: 0.05rem solid #DCC35E;
+  border-radius: 50%;
+  content: '';
+  height: 1.5rem;
+  left: 0.2rem;
+  position: absolute;
+  top: 0.2rem;
+  transform: translateX(0);
+  transition: all 290ms cubic-bezier(0.79, 0.01, 0.38, 0.99);
+  width: 1.5rem;
+}
+/* End checkbox change theme */
+
+@media screen and (max-width: 50rem) {
+  .main-content {
+    flex-direction: column;
+  }
+}

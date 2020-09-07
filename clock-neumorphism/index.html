@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock Neumorphism</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <input class="input" type="checkbox" name="theme" id="theme" checked />
+    <label class="label" for="theme"></label>
+    <main class="main-content">
+      <section class="section">
+        <div class="digital-clock">
+          <span class="dig-text" id="dig-hour">17</span>
+          <span class="dig-text separator">:</span>
+          <span class="dig-text" id="dig-minute">35</span>
+          <span class="dig-text separator">:</span>
+          <span class="dig-text" id="dig-second">46</span>
+        </div>
+      </section>
+      <section class="section">
+        <div class="analog-clock">
+          <span class="hour"></span>
+          <span class="minute"></span>
+          <span class="second"></span>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
