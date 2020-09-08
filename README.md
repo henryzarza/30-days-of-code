@@ -11,3 +11,4 @@ I decided to do this challenge to practice, improve, and learn new things about 
 | 2 | 3D Parallax Card | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/3d-parallax-card) | [Codepen](https://codepen.io/HenryZarza/full/YzqYwRb) |
 | 3 | Expanding flex cards | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/expanding-cards) | [Codepen](https://codepen.io/HenryZarza/full/PoPdjJz) |
 | 4 | Clock neumorphism | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/clock-neumorphism) | [Codepen](https://codepen.io/HenryZarza/full/mdPXJzE) |
+| 5 | Web components | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/web-components) | In your localhost 😄 |
