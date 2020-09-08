@@ -1,0 +1,77 @@
+.card {
+  background-color: var(--white);
+  border-radius: 0.25rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.header {
+  padding: 1rem;
+  position: relative;
+}
+
+.img {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.content > * {
+  color: var(--cod-gray);
+  font-family: var(--content-font);
+}
+
+.title {
+  background-color: rgba(0, 0, 0, 0.6);
+  bottom: 1.25rem;
+  color: var(--white);
+  font-family: var(--content-font);
+  font-size: 1.5rem;
+  left: 1rem;
+  line-height: 1.15;
+  padding: 1rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.footer {
+  border-top: 0.1rem solid var(--mercury);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.button {
+  border: 0.1rem solid var(--red);
+  border-radius: 0.25rem;
+  color: var(--red);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.8rem 1rem;
+  text-transform: uppercase;
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  background-color: var(--red);
+  color: var(--white);
+}

@@ -1,0 +1,29 @@
+.main-content {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
+  margin: 0 auto;
+  max-width: 75rem;
+  width: 100%;
+}
+
+.button {
+  background-color: var(--caribbean-green);
+  border: 0.1rem solid var(--caribbean-green);
+  border-radius: 0.25rem;
+  color: var(--white);
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 2rem auto;
+  padding: 0.8rem 1rem;
+  text-transform: uppercase;
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  background-color: transparent;
+  color: var(--caribbean-green);
+}
