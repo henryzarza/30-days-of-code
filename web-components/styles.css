@@ -1,0 +1,16 @@
+:root {
+  --caribbean-green: #01BE7F;
+  --cod-gray: #191919;
+  --content-font: 'Khula', sans-serif;
+  --mercury: #E7E7E7;
+  --red: #FC3A3A;
+  --title-font: 'Bangers', cursive;
+  --transition-duration: 290ms;
+  --transition-function: cubic-bezier(0.79, 0.01, 0.38, 0.99);
+  --white: #FFF;
+}
+
+body {
+  background-color: var(--mercury);
+  color: var(--cod-gray);
+}
