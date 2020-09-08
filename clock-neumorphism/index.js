@@ -15,7 +15,7 @@ setInterval(() => {
   const ss = date.getSeconds() * DEG;
 
   // Digital
-  dMinute.textContent = date.getHours().toString().padStart(2, '0');
+  dHour.textContent = date.getHours().toString().padStart(2, '0');
   dMinute.textContent = date.getMinutes().toString().padStart(2, '0');
   dSecond.textContent = date.getSeconds().toString().padStart(2, '0');
 

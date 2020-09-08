@@ -73,7 +73,7 @@
 /* Analog */
 .analog-clock {
   align-items: center;
-  background-image: url('./clock.png');
+  background-image: url('https://res.cloudinary.com/henryzarza/image/upload/v1599522960/General%20assets/clock_ttej2k.png');
   background-size: cover;
   border: 0.25rem solid var(--border-color);
   border-radius: 50%;
