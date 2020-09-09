@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Snow Effect
+    link(rel="stylesheet" href="./styles.css")
+  body
+    h1.title
+      | Winter is
+    h1.title.big
+      | Coming
+    - var n = 0;
+    while n < 200
+      .snowflake &#10052;
+      span
+        n=n++

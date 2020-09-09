@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,400&display=swap');
+$black: #000;
+$white: #FFF;
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: flex-start;
+  background: $black
+  url('https://images.unsplash.com/photo-1485773812267-3f56e3b6c2f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1700&q=80')
+  no-repeat center center / cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2rem 4rem;
+
+  &::before {
+    background-color: rgba($black, 0.3);
+    content: '';
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+  }
+}
+
+.title {
+  color: $white;
+  font-size: 4rem;
+  font-weight: 100;
+  position: relative;
+  text-shadow: 2px 1px 1px rgba($black, 0.3);
+
+  &.big {
+    font-size: 7rem;
+    font-weight: 400;
+    -webkit-text-stroke: 2px $black;
+    text-stroke: 2px $black;
+  }
+}
+
+.snowflake {
+  color: $white;
+  position: absolute;
+
+  span {
+    display: none;
+  }
+}
+
+// Total number of snowflakes
+$snowflake: 200;
+
+@for $i from 1 through $snowflake {
+  $delay: random(20) - 1s;
+  $duration: random(6) + 4s;
+  $left: random(100) * 1%;
+  $size: random(24);
+  $top: (random(50) + 50) * 1%;
+
+  .snowflake:nth-of-type(#{$i}) {
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-iteration-count: infinite;
+    animation-name: snowflake-#{$i};
+    font-size: $size * 1px;
+    left: $left;
+    top: -$top;
+  }
+
+  @keyframes snowflake-#{$i} {
+    0% {
+      left: $left;
+      top: -$top;
+      transform: rotate(0deg);
+    }
+    25% {
+      left: $left + 1%;
+    }
+    50% {
+      left: $left;
+    }
+    75% {
+      left: $left + 2%;
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      top: $top + 40%;
+      transform: rotate(360deg);
+    }
+  }
+}
