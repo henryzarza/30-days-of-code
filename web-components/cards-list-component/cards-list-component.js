@@ -92,7 +92,7 @@ class CardsListComponent extends HTMLElement {
   }
 
   connectedCallback() {
-    this.generateCards();
+    this.setupCards();
     this.setupClickListener();
   }
 
@@ -107,20 +107,23 @@ class CardsListComponent extends HTMLElement {
     `;
   }
 
-  generateCards() {
+  setupCards() {
     const container = this.shadow.querySelector('.main-content');
-    container.innerHTML = '';
-    CHARACTERS.slice(0, this.lastCardIndex).map((character) => {
-      const newElement = document.createElement('card-component');
-      newElement.setAttribute('image-link', character.link);
-      newElement.setAttribute('title', character.title);
-      newElement.setAttribute('subtitle', character.subtitle);
-      newElement.setAttribute('description', character.description);
-      newElement.id = character.id;
-      newElement.addEventListener('DeleteCard', () => this.removeCard(character.id));
+    CHARACTERS.slice(0, this.lastCardIndex).map((character) =>
+      this.generateCard(character, container)
+    );
+  }
 
-      container.appendChild(newElement);
-    });
+  generateCard(character, container) {
+    const newElement = document.createElement('card-component');
+    newElement.setAttribute('image-link', character.link);
+    newElement.setAttribute('title', character.title);
+    newElement.setAttribute('subtitle', character.subtitle);
+    newElement.setAttribute('description', character.description);
+    newElement.id = character.id;
+    newElement.addEventListener('DeleteCard', () => this.removeCard(character.id));
+
+    container.appendChild(newElement);
   }
 
   setupClickListener() {
@@ -131,7 +134,10 @@ class CardsListComponent extends HTMLElement {
   addCard() {
     this.lastCardIndex++;
     if (this.lastCardIndex <= CHARACTERS.length) {
-      this.generateCards();
+      this.generateCard(
+        CHARACTERS[this.lastCardIndex - 1],
+        this.shadow.querySelector('.main-content')
+      );
     }
   }
 
