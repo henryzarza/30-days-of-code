@@ -1,0 +1,211 @@
+:root {
+  --alabaster: #FAFAFA;
+  --cod-gray: #191919;
+  --white: #FFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--alabaster);
+}
+
+.main-content {
+  margin: 0 auto;
+  max-width: 75rem;
+  width: 100%;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 0.25rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex: 0 1 25rem;
+  flex-direction: column;
+  line-height: 0;
+  margin: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+svg {
+  height: auto;
+  width: 100%;
+}
+
+.button {
+  background: linear-gradient(45deg, #8C67FE 0, #66FAF6 100%);
+  border: 0.1rem solid var(--cod-gray);
+  border-radius: 0.25rem;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  text-transform: uppercase;
+  transition: all 330ms ease-in;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  background: #8C67FE;
+}
+
+/* Bike */
+#right-wheel,
+#left-wheel {
+  animation: wheel 1.5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#man-bike {
+  animation: bike 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+@keyframes wheel {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes bike {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(20deg);
+  }
+}
+/* End bike */
+
+/* Nature */
+.active #big-grass,
+.active #flower-1,
+.active #flower-2,
+.active #grass-1,
+.active #tree {
+  animation: growing 300ms linear;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+.active #flower-1,
+.active #grass-1,
+.active #flower-2,
+.active #tree {
+  animation-fill-mode: forwards;
+  transform: scaleY(0);
+}
+
+.active #flower-1 {
+  animation-delay: 500ms;
+}
+
+.active #flower-2,
+.active #grass-1 {
+  animation-delay: 600ms;
+}
+
+.active #tree {
+  animation-delay: 300ms;
+}
+
+.active #sun {
+  animation: sun 300ms ease-in forwards;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes growing {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes sun {
+  from {
+    transform: translate(-100%, -100%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+/* End nature */
+
+/* Travel */
+.active #world,
+.active #plant-1,
+.active #plant-2,
+.active #pin-1,
+.active #pin-2,
+.active #pin-3 {
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+.active #world {
+  animation: world 300ms ease-in forwards;
+  transform: scale(0, 0);
+}
+
+.active #plant-1,
+.active #plant-2 {
+  animation: growing 300ms ease-in 200ms forwards;
+  transform: scaleY(0);
+}
+
+.active #pin-1,
+.active #pin-2,
+.active #pin-3 {
+  animation: pin 300ms ease-in-out 500ms forwards;
+  transform: translateY(-600%);
+}
+
+.active #pin-2 {
+  animation-delay: 700ms;
+}
+
+.active #pin-3 {
+  animation-delay: 900ms;
+}
+
+@keyframes world {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes pin {
+  from {
+    transform: translateY(-600%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+/* End travel */
