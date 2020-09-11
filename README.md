@@ -12,3 +12,5 @@ I decided to do this challenge to practice, improve, and learn new things about 
 | 3 | Expanding flex cards | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/expanding-cards) | [Codepen](https://codepen.io/HenryZarza/full/PoPdjJz) |
 | 4 | Clock neumorphism | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/clock-neumorphism) | [Codepen](https://codepen.io/HenryZarza/full/mdPXJzE) |
 | 5 | Web components | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/web-components) | In your localhost 😄 |
+| 6 | Snow effect | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/snow-effect) | [Codepen](https://codepen.io/HenryZarza/full/rNBoNVo) |
+| 7 | Fitness Landing Page | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/fitness-landing-page) | [Codepen](https://codepen.io/HenryZarza/full/QWNmRxG) |
