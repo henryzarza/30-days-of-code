@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap');
+
+:root {
+  --cod-gray: #111;
+  --lima: #37D72F;
+  --side-padding: 4rem;
+  --transition-duration: 290ms;
+  --transition-function: cubic-bezier(0.79, 0.01, 0.38, 0.99);
+  --white: #FFF;
+  --wild-sand: #F5F5F5;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.section {
+  background-color: var(--cod-gray);
+  min-height: 100vh;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 1rem var(--side-padding);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.logo {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.logo span {
+  color: var(--lima);
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-link {
+  color: var(--white);
+  font-weight: 200;
+  margin-right: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  text-decoration: underline;
+}
+
+.nav-link:last-of-type {
+  margin-right: 0;
+}
+
+/* Main section */
+.main {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 0 var(--side-padding);
+  position: relative;
+}
+
+.main::before {
+  background-color: var(--lima);
+  content: '';
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: skewX(-25deg);
+  transform-origin: top;
+  width: 25rem;
+  z-index: 1;
+}
+
+.main-content {
+  align-items: center;
+  display: flex;
+  flex: 1;
+}
+
+.text-box {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  width: 27rem;
+  z-index: 2;
+}
+
+.title {
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.main-paragraph {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.main-link {
+  background-color: var(--white);
+  color: var(--cod-gray);
+  font-weight: 500;
+  overflow: hidden;
+  padding: 0.8rem 1.3rem;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.main-link::after {
+  background-color: var(--lima);
+  content: '';
+  height: 0;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  transition: height var(--transition-duration) var(--transition-function);
+  width: 120%;
+  will-change: height;
+  z-index: -1;
+}
+
+.main-link:hover::after,
+.main-link:active::after,
+.main-link:focus::after {
+  height: 250%;
+}
+
+.main-link:hover,
+.main-link:active,
+.main-link:focus {
+  color: var(--white);
+}
+
+.img-box {
+  align-items: flex-end;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  z-index: 2;
+}
+
+.img-box img {
+  max-width: 28rem;
+  width: 75%;
+}
+
+.video {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  opacity: 0.15;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.social-links {
+  align-items: center;
+  bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  left: var(--side-padding);
+  max-width: 100%;
+  position: absolute;
+  width: 10rem;
+  z-index: 2;
+}
+
+.social-link {
+  width: 1.5rem;
+}
+
+.social-link.facebook {
+  width: 0.8rem;
+}
+
+.social-link img {
+  cursor: pointer;
+  filter: invert(1);
+  transition: filter var(--transition-duration) var(--transition-function);
+  width: 100%;
+}
+
+.social-link:hover img {
+  filter: invert(0.5);
+}
+/* End main section */
+
+/* Coach section */
+.coach-section {
+  align-items: center;
+  background-color: var(--wild-sand);
+  display: flex;
+  flex-direction: column;
+  padding: 4rem var(--side-padding) 2rem;
+}
+
+.subtitle {
+  color: var(--cod-gray);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 3rem;
+}
+
+.coaches {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  margin: 0 auto;
+  max-width: 75rem;
+  width: 100%;
+}
+
+.coach {
+  background-color: var(--white);
+  border-radius: 0.25rem;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+}
+
+.coach-name {
+  color: var(--cod-gray);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+}
+
+.coach-description {
+  color: var(--cod-gray);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.coach-photo {
+  background-image: url(https://images.unsplash.com/flagged/photo-1574660879705-48123e1ac163?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3400&q=80);
+  background-size: contain;
+  clip-path: circle();
+  float: left;
+  height: 9rem;
+  margin-right: 1.5rem;
+  shape-outside: circle();
+  width: 10rem;
+}
+
+.coach-photo.women {
+  background-image: url(https://images.unsplash.com/photo-1584380931214-dbb5b72e7fd0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=987&q=80);
+}
+
+.coach-link {
+  align-self: center;
+  background-color: var(--lima);
+  border: 0.1rem solid var(--lima);
+  border-radius: 0.25rem;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.coach-link:hover,
+.coach-link:active,
+.coach-link:focus {
+  background-color: var(--wild-sand);
+  color: var(--lima);
+}
+/* End coach section */
+
+@media screen and (max-width: 50rem) {
+  :root {
+    --side-padding: 1rem;
+  }
+
+  .main {
+    flex-direction: column;
+    padding-top: 6rem;
+  }
+
+  .main::before {
+    transform-origin: bottom;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .main-content {
+    margin-bottom: 1rem;
+  }
+
+  .social-links {
+    flex-direction: column;
+    left: initial;
+    right: var(--side-padding);
+    width: auto;
+  }
+
+  .social-link {
+    margin-bottom: 0.5rem;
+  }
+
+  .social-link:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .coaches {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-section {
+    padding: 2rem var(--side-padding);
+  }
+
+  .subtitle {
+    margin-bottom: 2rem;
+  }
+}
