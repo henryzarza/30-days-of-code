@@ -1,0 +1,118 @@
+:root {
+  --code-gray: #091921;
+  --linear-gradient: linear-gradient(#14FFE9, #FFEB3B, #FF00E0);
+  --mardi-grass: #240229;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.section {
+  align-items: center;
+  background-color: var(--code-gray);
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.section:last-of-type {
+  background-color: var(--mardi-grass);
+}
+
+.loader {
+  border-radius: 50%;
+  height: 12.5rem;
+  position: relative;
+  width: 12.5rem;
+}
+
+.loader::before {
+  border-radius: 50%;
+  bottom: 1.56rem;
+  content: '';
+  left: 1.56rem;
+  position: absolute;
+  right: 1.56rem;
+  top: 1.56rem;
+  z-index: 1;
+}
+
+.loader span {
+  background: var(--linear-gradient);
+  border-radius: 50%;
+  filter: blur(20px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* Glowing */
+.glowing {
+  animation: spin 0.5s linear infinite;
+  background: var(--linear-gradient);
+}
+
+.glowing::before {
+  background-color: var(--code-gray);
+}
+
+.glowing span {
+  filter: blur(5px);
+}
+
+.glowing span:nth-child(2) {
+  filter: blur(10px);
+}
+
+.glowing span:nth-child(3) {
+  filter: blur(25px);
+}
+
+.glowing span:last-child {
+  filter: blur(50px);
+}
+/* Glowing */
+
+/* Neumorphism */
+.neumorphism {
+  border: 0.25rem solid var(--mardi-grass);
+  box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.1), 10px 10px 10px rgba(0, 0, 0, 0.4),
+  inset -5px -5px 5px rgba(255, 255, 255, 0.2), inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.neumorphism::before {
+  background-color: var(--mardi-grass);
+  border: 0.15rem solid var(--mardi-grass);
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.2), inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.neumorphism span {
+  animation: spin 0.5s linear infinite;
+}
+/* End neumorphism */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 50rem) {
+  body {
+    flex-direction: column;
+  }
+}
