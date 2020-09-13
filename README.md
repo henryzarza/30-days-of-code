@@ -16,3 +16,4 @@ I decided to do this challenge to practice, improve, and learn new things about 
 | 7 | Fitness Landing Page | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/fitness-landing-page) | [Codepen](https://codepen.io/HenryZarza/full/QWNmRxG) |
 | 8 | SVG Animation | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/svg-animation) | In your localhost 😄 |
 | 9 | Gradient loader | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/gradient-loader) | [Codepen](https://codepen.io/HenryZarza/full/qBZYLaZ) |
+| 10 | Clip-path hover | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/clip-path-hover) | [Codepen](https://codepen.io/HenryZarza/full/OJNEVKV) |
