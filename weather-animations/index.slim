@@ -1,0 +1,67 @@
+doctype html
+html
+  head
+    meta charset="UTF-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title Weather animations
+    link rel="stylesheet" href="./styles.css"
+  body
+    .card-content
+      .card.rainy
+        - for i in (1..10)
+          div class="drop-big-#{ i }"
+        - for i in (1..10)
+          div class="drop-medium-#{ i }"
+        - for i in (1..10)
+          div class="drop-small-#{ i }"
+        .moon
+          - for i in (1..9)
+            div class="crater crater-#{ i }"
+        - for i in (1..4)
+            div class="hill hill-#{ i }"
+        .information
+          h6.temperature 12°
+          .info Wind: E 7 km/h <br/> Humidity: 87%
+          .preview
+            .col
+              span.day Mon
+              span 9° / 14°
+            .col
+              span.day Tue
+              span 10° / 15°
+      .card.sunny
+        .sun
+          - for i in (1..4)
+            div class="crater crater-#{ i }"
+        - for i in (1..4)
+          div class="hill hill-#{ i }"
+        .information
+          h6.temperature 34°
+          .info Wind: E 3.5 km/h <br/> Humidity: 35%
+          .preview
+            .col
+              span.day Tue
+              span 30° / 36°
+            .col
+              span.day Wed
+              span 24° / 29°
+      .card.day-rainy
+        - for i in (1..10)
+          div class="drop-big-#{ i }"
+        - for i in (1..10)
+          div class="drop-medium-#{ i }"
+        - for i in (1..10)
+          div class="drop-small-#{ i }"
+        .sun
+        - for i in (1..4)
+          div class="hill hill-#{ i }"
+        .information
+          h6.temperature 16°
+          .info Wind: E 15 km/h <br/> Humidity: 34%
+          .preview
+            .col
+              span.day Tue
+              span 16° / 21°
+            .col
+              span.day Fri
+              span 17° / 20°

@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+$white: #FFF;
+$wild-sand: #F5F5F5;
+$drop-color: #7FC1F9;
+$rain-bg: #1A2238;
+$moon-color: #F6EDBD;
+$crater-color: #ECE1A8;
+$sun-color: #ECD819;
+$sun-crater-color: #D4C219;
+$day-rainy-bg: #8D9CAD;
+
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $wild-sand;
+}
+
+.card-content {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 2rem;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 70rem;
+  min-height: 100vh;
+  padding: 1rem;
+  width: 100%;
+}
+
+.card {
+  background-color: $white;
+  border-radius: 0.25rem;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+  flex: 0 1 25rem;
+  height: 25rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.information {
+  align-items: center;
+  background-color: $white;
+  bottom: 0;
+  color: var(--text-color);
+  display: flex;
+  height: 5.625rem;
+  left: 0;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-right: 1rem;
+}
+
+.info {
+  flex: 1;
+  font-weight: 300;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    font-size: 1rem;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .day {
+    font-weight: 300;
+    margin-right: 1rem;
+    text-align: right;
+  }
+}
+
+.hill {
+  background-color: var(--hill-1-color);
+  border-radius: 50%;
+  bottom: -5rem;
+  height: 17.5rem;
+  left: -4rem;
+  position: absolute;
+  width: 21.88rem;
+}
+
+.hill-2 {
+  bottom: -6rem;
+  left: 11rem;
+}
+
+.hill-3,
+.hill-4 {
+  background-color: var(--hill-2-color);
+  z-index: 1;
+}
+
+.hill-3 {
+  background-color: var(--hill-3-color);
+  bottom: -8rem;
+  left: -9rem;
+}
+
+.hill-4 {
+  bottom: -8rem;
+  left: 4.75rem;
+}
+
+/* Rainy */
+.rainy {
+  background-color: $rain-bg;
+  --hill-1-color: #26314F;
+  --hill-2-color: #303C5D;
+  --hill-3-color: #232C44;
+  --text-color: #394568;
+}
+
+.moon {
+  animation: riseMoon 1s ease-out;
+  background-color: $moon-color;
+  border-radius: 50%;
+  box-shadow: 0 0 0.63rem 0 $moon-color;
+  height: 3.75rem;
+  left: 3rem;
+  overflow: hidden;
+  position: absolute;
+  top: 2rem;
+  width: 3.75rem;
+
+  .crater {
+    background-color: $crater-color;
+    border-radius: 0.8rem;
+    height: 0.75rem;
+    left: 28px;
+    position: absolute;
+    top: 9px;
+    width: 0.75rem;
+  }
+
+  .crater-2 {
+    left: 0;
+  }
+
+  .crater-3 {
+    left: 0;
+    top: 50%;
+  }
+
+  .crater-4 {
+    left: 70%;
+    top: 60%;
+    transform: scale(0.5);
+  }
+
+  .crater-5 {
+    left: 15px;
+    top: 0;
+    transform: scale(0.3);
+  }
+
+  .crater-6 {
+    left: 50%;
+    top: 80%;
+    transform: scale(0.8);
+  }
+
+  .crater-7 {
+    left: 85%;
+    top: 17px;
+  }
+
+  .crater-8 {
+    left: 17px;
+    top: 60%;
+  }
+
+  .crater-9 {
+    left: 17px;
+    top: 30%;
+    transform: scale(0.7);
+  }
+}
+
+@keyframes riseMoon {
+  from {
+    transform: translate(-2.5rem, 15.5rem);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@for $i from 1 through 10 {
+  .drop-big-#{$i} {
+    animation: drop (0.7 + random(2) / 10) + s linear (random(50) / 25) + s infinite both;
+    background-color: $drop-color;
+    border-radius: 50%;
+    bottom: 5.625rem;
+    height: 0.5rem;
+    left: (-20 + 38 * $i) + px;
+    position: absolute;
+    transform-origin: 50% 100%;
+    width: 0.5rem;
+    z-index: 3;
+
+    &::before {
+      background: $drop-color;
+      border-radius: 0.2rem;
+      content: '';
+      height: 0.375rem;
+      left: 1px;
+      position: absolute;
+      top: -2px;
+      width: 0.375rem;
+    }
+
+    &::after {
+      background-color: $drop-color;
+      border-radius: 50%;
+      content: '';
+      height: 0.625rem;
+      left: 2px;
+      position: absolute;
+      top: -5px;
+      width: 0.25rem;
+    }
+  }
+
+  .drop-medium-#{$i} {
+    @extend .drop-big-1;
+
+    animation: drop (1.3 + random(2) / 10) + s linear (random(50) / 25) + s infinite both;
+    height: 0.375rem;
+    left: (-20 + 38 * $i) + px;
+    opacity: 0.6;
+    width: 0.375rem;
+
+    &::before {
+      height: 0.25rem;
+      left: 1px;
+      top: -2px;
+      width: 0.25rem;
+    }
+
+    &::after {
+      height: 0.375rem;
+      left: 2px;
+      top: -0.25rem;
+      width: 2px;
+    }
+  }
+
+  .drop-small-#{$i} {
+    @extend .drop-big-1;
+
+    animation: drop (1.9 + random(2) / 10) + s linear (random(50) / 25) + s infinite both;
+    height: 0.25rem;
+    left: (-20 + 38 * $i) + px;
+    opacity: 0.3;
+    width: 0.25rem;
+
+    &::before {
+      height: 2px;
+      left: 1px;
+      top: -2px;
+      width: 2px;
+    }
+
+    &::after {
+      height: 0.25rem;
+      left: 1px;
+      top: -3px;
+      width: 2px;
+    }
+  }
+}
+
+@keyframes drop {
+  0% {
+    transform: translate3d(2.5rem, -20rem, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+  85% {
+    transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scaleX(3) scaleY(0) rotate(0deg);
+  }
+}
+/* End rainy */
+
+/* Sunny */
+.sunny {
+  background-color: $drop-color;
+  --hill-1-color: #606903;
+  --hill-2-color: #7D8D25;
+  --hill-3-color: #B7A346;
+  --text-color: #803E11;
+}
+
+.sun {
+  @extend .moon;
+
+  animation: riseSun 1s ease-out;
+  background-color: $sun-color;
+  box-shadow: 0 0 1rem 0 $sun-color;
+  left: 75%;
+  overflow: hidden;
+  top: 1.5rem;
+
+  .crater {
+    background-color: $sun-crater-color;
+  }
+}
+
+@keyframes riseSun {
+  from {
+    transform: translate(15.5rem, 15.5rem);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+/* End sunny */
+
+/* Day rainy */
+.day-rainy {
+  background-color: $day-rainy-bg;
+  --hill-1-color: #304783;
+  --hill-2-color: #0F1A35;
+  --hill-3-color: #232C44;
+  --text-color: #1F4E8D;
+
+  .sun {
+    background-color: lighten($sun-color, 30%);
+    box-shadow: none;
+  }
+}
+/* End day rainy */
