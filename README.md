@@ -17,4 +17,5 @@ I decided to do this challenge to practice, improve, and learn new things about 
 | 8 | SVG Animation | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/svg-animation) | In your localhost 😄 |
 | 9 | Gradient loader | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/gradient-loader) | [Codepen](https://codepen.io/HenryZarza/full/qBZYLaZ) |
 | 10 | Clip-path hover | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/clip-path-hover) | [Codepen](https://codepen.io/HenryZarza/full/OJNEVKV) |
-| 10 | Weather animations | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/weather-animations) | [Codepen](https://codepen.io/HenryZarza/full/XWdYPjw) |
+| 11 | Weather animations | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/weather-animations) | [Codepen](https://codepen.io/HenryZarza/full/XWdYPjw) |
+| 12 | Mix-blend mode | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/mix-blend-mode) | [Codepen](https://codepen.io/HenryZarza/full/poyZrqG) |
