@@ -19,3 +19,4 @@ I decided to do this challenge to practice, improve, and learn new things about 
 | 10 | Clip-path hover | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/clip-path-hover) | [Codepen](https://codepen.io/HenryZarza/full/OJNEVKV) |
 | 11 | Weather animations | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/weather-animations) | [Codepen](https://codepen.io/HenryZarza/full/XWdYPjw) |
 | 12 | Mix-blend mode | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/mix-blend-mode) | [Codepen](https://codepen.io/HenryZarza/full/poyZrqG) |
+| 13 | Animals | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/animals) | [Codepen](https://codepen.io/HenryZarza/full/MWyqwog) |
