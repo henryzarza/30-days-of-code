@@ -1,0 +1,478 @@
+:root {
+  --alabaster: #FAFAFA;
+  --biloba-flower: #BEA8F0;
+  --cape-palliser: #AF7346;
+  --chestnut-rose: #CE666D;
+  --cod-gray: #353B48;
+  --cod-gray-1: #191919;
+  --frangipani: #FFDCB5;
+  --frostee: #EAF7EB;
+  --geraldine: #F7949A;
+  --lemon-chiffon: #F9EEAB;
+  --nutmeg: #7F4F2A;
+  --pastel-green: #7BED9F;
+  --sundown: #FFB7BC;
+  --whisper: #F5F6FA;
+  --white: #FFF;
+  --zest: #E67E22;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--alabaster);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.card-container {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 2rem;
+  width: 55rem;
+}
+
+.card {
+  align-items: center;
+  border-radius: 0.25rem;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  height: 23rem;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.head {
+  position: absolute;
+}
+
+.face {
+  background-color: var(--geraldine);
+  border-radius: 50%;
+  height: 10rem;
+  position: relative;
+  width: 10rem;
+}
+
+/* Pig */
+.pig {
+  background-color: var(--frangipani);
+}
+
+.pig-ears {
+  background-color: var(--sundown);
+  border: 0.5rem solid var(--geraldine);
+  height: 3.75rem;
+  position: absolute;
+  top: -0.7rem;
+  width: 3.75rem;
+}
+
+.pig-ears.ear-l {
+  border-top-left-radius: 0.9rem;
+  left: 0.625rem;
+  transform: rotate(-7deg) skewY(27deg);
+}
+
+.pig-ears.ear-r {
+  border-top-right-radius: 0.9rem;
+  right: 0.625rem;
+  transform: rotate(7deg) skewY(-27deg);
+}
+
+.pig-eye {
+  animation: eyes 15s ease-in-out infinite;
+  background-color: var(--white);
+  border-radius: 50%;
+  height: 1.375rem;
+  position: absolute;
+  top: 40%;
+  width: 1.375rem;
+}
+
+.pig-eye::before {
+  animation: pupills 15s ease-in-out infinite;
+  background-color: var(--cod-gray);
+  border-radius: 50%;
+  content: '';
+  height: 0.25rem;
+  left: 0.55rem;
+  position: absolute;
+  top: 0.55rem;
+  width: 0.25rem;
+}
+
+.pig-eye.eye-l {
+  left: 25%;
+}
+
+.pig-eye.eye-r {
+  right: 25%;
+}
+
+.pig-nose {
+  background-color: var(--sundown);
+  border-radius: 6.25rem / 5rem;
+  height: 3.125rem;
+  left: 3.125rem;
+  position: absolute;
+  top: 55%;
+  width: 3.75rem;
+}
+
+.pig-nose::before,
+.pig-nose::after {
+  background-color: var(--chestnut-rose);
+  border-radius: 50%;
+  content: '';
+  height: 0.75rem;
+  position: absolute;
+  top: 30%;
+  width: 0.75rem;
+}
+
+.pig-nose::before {
+  left: 0.875rem;
+}
+
+.pig-nose::after {
+  right: 0.875rem;
+}
+/* End pig */
+
+/* Cat */
+.cat {
+  background-color: var(--biloba-flower);
+}
+
+.cat .face {
+  background-color: var(--whisper);
+  overflow: hidden;
+}
+
+.cat .face::before {
+  background-color: var(--zest);
+  border-bottom-right-radius: 50%;
+  content: '';
+  height: 6rem;
+  left: -0.2rem;
+  position: absolute;
+  width: 5.5rem;
+}
+
+.cat-ears {
+  background-color: var(--geraldine);
+  border: 0.5rem solid var(--whisper);
+  height: 6rem;
+  position: absolute;
+  top: -0.7rem;
+  width: 5rem;
+}
+
+.cat-ears.ear-l {
+  background-color: var(--sundown);
+  border-color: var(--zest);
+  border-top-left-radius: 0.9rem;
+  left: -0.05rem;
+  transform: rotate(-5deg) skewY(30deg);
+}
+
+.cat-ears.ear-r {
+  border-top-right-radius: 0.9rem;
+  right: -0.05rem;
+  transform: rotate(5deg) skewY(-30deg);
+}
+
+.cat-eye {
+  animation: eyes 15s ease-in-out infinite;
+  background-color: var(--pastel-green);
+  border-radius: 50%;
+  height: 3.5rem;
+  position: absolute;
+  top: 20%;
+  width: 3.5rem;
+}
+
+.cat-eye::before {
+  animation: catPupills 15s ease-in-out infinite;
+  background-color: var(--cod-gray);
+  border-radius: 50%;
+  content: '';
+  height: 70%;
+  left: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  width: 70%;
+}
+
+.cat-eye.eye-l {
+  left: 10%;
+}
+
+.cat-eye.eye-r {
+  right: 10%;
+}
+
+.cat-mount {
+  background-color: var(--sundown);
+  border-radius: 0.5rem 0.5rem 1rem 1rem;
+  height: 1rem;
+  left: 45%;
+  position: absolute;
+  top: 63%;
+  width: 1rem;
+}
+
+.cat-mount::before {
+  background-color: var(--cod-gray);
+  border-radius: 0.4rem;
+  bottom: -1rem;
+  content: '';
+  height: 0.4rem;
+  left: -0.2rem;
+  position: absolute;
+  width: 1.5rem;
+}
+/* End cat */
+
+/* Bunny */
+.bunny {
+  background-color: var(--lemon-chiffon);
+}
+
+.bunny .face {
+  background-color: var(--whisper);
+}
+
+.bunny-ears {
+  background-color: var(--sundown);
+  border-color: var(--whisper);
+  border-radius: 2rem;
+  top: -2rem;
+  width: 7rem;
+}
+
+.bunny-ears.ear-l {
+  left: -1.375rem;
+  transform: rotate(23deg) skewY(47deg);
+}
+
+.bunny-ears.ear-r {
+  right: -1.375rem;
+  transform: rotate(-23deg) skewY(-47deg);
+}
+
+.bunny-eye::before {
+  animation: none;
+  height: 75%;
+  left: 0.16rem;
+  top: 0.19rem;
+  width: 75%;
+}
+
+.bunny-whiskers,
+.bunny-whiskers::before,
+.bunny-whiskers::after {
+  background-color: var(--cod-gray);
+  border-radius: 0.5rem;
+  height: 0.1rem;
+  position: absolute;
+  top: 68%;
+  width: 1.3rem;
+}
+
+.bunny-whiskers::before,
+.bunny-whiskers::after {
+  content: '';
+  height: 0.08rem;
+  top: 0.5rem;
+  transform: rotateZ(-40deg) translateX(2px);
+}
+
+.bunny-whiskers.left {
+  left: 25%;
+}
+
+.bunny-whiskers.left::before {
+  bottom: 0.5rem;
+  top: initial;
+  transform: rotateZ(40deg) translateX(2px);
+}
+
+.bunny-whiskers.right {
+  right: 25%;
+}
+
+.bunny-whiskers.right::after {
+  transform: rotateZ(40deg) translateX(-2px);
+}
+
+.bunny-whiskers.right::before {
+  bottom: 0.5rem;
+  top: initial;
+  transform: rotateZ(-40deg) translateX(-2px);
+}
+/* End bunny */
+
+/* Dog */
+.dog {
+  background-color: var(--frostee);
+}
+
+.dog .face {
+  background-color: var(--cape-palliser);
+}
+
+.dog-ears {
+  background-color: var(--nutmeg);
+  border-radius: 2.5rem / 5rem 5rem 3.75rem 3.75rem;
+  height: 6.25rem;
+  position: absolute;
+  top: 0;
+  width: 3.125rem;
+}
+
+.dog-ears.ear-l {
+  left: 0;
+  transform: rotate(40deg);
+}
+
+.dog-ears.ear-r {
+  background-color: var(--sundown);
+  border: 0.5rem solid var(--nutmeg);
+  right: 0;
+  top: -3rem;
+  transform: rotate(215deg);
+}
+
+.dog-eye {
+  animation: none;
+  background-color: var(--cod-gray-1);
+  height: 2rem;
+  width: 2rem;
+}
+
+.dog-eye::before {
+  animation: none;
+  background-color: var(--white);
+  height: 40%;
+  left: 0.9rem;
+  top: 0.4rem;
+  width: 40%;
+}
+
+.dog-mount,
+.dog-mount::before {
+  background-color: var(--cod-gray-1);
+}
+
+.dog-whiskers,
+.dog-whiskers::before,
+.dog-whiskers::after {
+  background-color: var(--cod-gray-1);
+  border-radius: 50%;
+  height: 0.2rem;
+  position: absolute;
+  top: 65%;
+  width: 0.2rem;
+}
+
+.dog-whiskers::before,
+.dog-whiskers::after {
+  content: '';
+  left: 0.2rem;
+  top: 0.3rem;
+}
+
+.dog-whiskers::after {
+  left: -0.2rem;
+}
+
+.dog-whiskers.left {
+  left: 37%;
+}
+
+.dog-whiskers.right {
+  right: 37%;
+}
+
+.dog-whiskers.right::before {
+  right: 0.2rem;
+}
+
+.dog-whiskers.right::after {
+  right: -0.2rem;
+}
+/* End dog */
+
+@keyframes eyes {
+  0%,
+  23%,
+  25%,
+  65%,
+  67%,
+  89%,
+  91%,
+  100% {
+    transform: scaleY(1);
+  }
+  24%,
+  66%,
+  90% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes pupills {
+  0%,
+  65%,
+  67%,
+  100% {
+    transform: scaleY(1);
+  }
+  23%,
+  25% {
+    transform: scaleY(1) translateX(0.3rem);
+  }
+  89%,
+  91% {
+    transform: scaleY(1) translateX(-0.3rem);
+  }
+  24%,
+  66%,
+  90% {
+    transform: scaleY(2);
+  }
+}
+
+@keyframes catPupills {
+  0%,
+  65%,
+  67%,
+  100% {
+    transform: scaleY(1);
+  }
+  23%,
+  25% {
+    transform: scaleY(1) scaleX(0.5);
+  }
+  89%,
+  91% {
+    transform: scaleY(1.1) scaleX(0.2);
+  }
+  24%,
+  66%,
+  90% {
+    transform: scaleY(2);
+  }
+}
