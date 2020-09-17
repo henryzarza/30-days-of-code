@@ -20,3 +20,4 @@ I decided to do this challenge to practice, improve, and learn new things about 
 | 11 | Weather animations | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/weather-animations) | [Codepen](https://codepen.io/HenryZarza/full/XWdYPjw) |
 | 12 | Mix-blend mode | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/mix-blend-mode) | [Codepen](https://codepen.io/HenryZarza/full/poyZrqG) |
 | 13 | Animals | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/animals) | [Codepen](https://codepen.io/HenryZarza/full/MWyqwog) |
+| 14 | CSS mask & background-clip | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/scroll-mask) | [Codepen](https://codepen.io/HenryZarza/full/aQrVEG) |
