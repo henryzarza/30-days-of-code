@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+:root {
+  --cod-gray: #191919;
+  --white: #FFF;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.scroll {
+  height: 156.25rem;
+}
+
+.title {
+  color: var(--cod-gray);
+  font-size: 0.85rem;
+  font-weight: 400;
+  left: 50%;
+  letter-spacing: 1px;
+  position: fixed;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.svg-arrow {
+  display: block;
+  margin: 0.85rem auto;
+  width: 0.9rem;
+}
+
+.arrow {
+  animation: levitating 350ms ease-in alternate infinite;
+}
+
+@keyframes levitating {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(0.9rem);
+  }
+}
+
+.cover {
+  background: url('https://images.unsplash.com/photo-1524260855046-f743b3cdad07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2001&q=80')
+  no-repeat center/cover;
+  height: 100%;
+  left: 0;
+  -webkit-mask-image: url('https://res.cloudinary.com/henryzarza/image/upload/v1600359957/General%20assets/clip-mask_oil3ai.png');
+  mask-image: url('https://res.cloudinary.com/henryzarza/image/upload/v1600359957/General%20assets/clip-mask_oil3ai.png');
+  -webkit-mask-size: 1800% 100%;
+  mask-size: 1800% 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.bg-section {
+  background-color: var(--cod-gray);
+  position: relative;
+  z-index: 1;
+}
+
+.card-section {
+  align-content: center;
+  align-items: center;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 60rem;
+  min-height: 100vh;
+  padding: 2rem;
+  width: 100%;
+}
+
+.card {
+  align-items: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: var(--white);
+  display: flex;
+  font-size: 6rem;
+  font-weight: 700;
+  height: 16rem;
+  justify-content: center;
+  line-height: 1.1;
+  padding: 2rem;
+  position: relative;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+}
+
+.card::before {
+  background-image: inherit;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -2;
+}
+
+.card::after {
+  background-color: var(--cod-gray);
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  top: 2rem;
+  z-index: -1;
+}
+
+.card:first-of-type {
+  background-image: url(https://images.unsplash.com/photo-1599103482679-a3ad6286eda9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80);
+}
+
+.card:nth-of-type(2) {
+  background-image: url(https://images.unsplash.com/photo-1600113719447-11944b2d2055?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+}
+
+.card:nth-of-type(3) {
+  background-image: url(https://images.unsplash.com/photo-1600022529206-08ceeeae2328?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+}
+
+.card-mask {
+  background: url(https://images.unsplash.com/photo-1514227344848-4e29bbe5b488?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80)
+  100% / cover no-repeat;
+  height: 25rem;
+  -webkit-mask-image: url(http://tympanus.net/codrops-playground/assets/images/cssref/properties/mask-image/mask-image.png);
+  mask-image: url(http://tympanus.net/codrops-playground/assets/images/cssref/properties/mask-image/mask-image.png);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  width: 100%;
+}
