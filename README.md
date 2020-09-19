@@ -22,3 +22,4 @@ I decided to do this challenge to practice, improve, and learn new things about 
 | 13 | Animals | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/animals) | [Codepen](https://codepen.io/HenryZarza/full/MWyqwog) |
 | 14 | CSS mask & background-clip | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/scroll-mask) | [Codepen](https://codepen.io/HenryZarza/full/aQrVEG) |
 | 15 | Animation with motion | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/animation-with-motion) | [Codepen](https://codepen.io/HenryZarza/full/xxVyEpB) |
+| 16 | Parallax | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/parallax) | [Codepen](https://codepen.io/HenryZarza/full/oNxaMwE) |
