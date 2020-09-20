@@ -23,3 +23,4 @@ I decided to do this challenge to practice, improve, and learn new things about 
 | 14 | CSS mask & background-clip | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/scroll-mask) | [Codepen](https://codepen.io/HenryZarza/full/aQrVEG) |
 | 15 | Animation with motion | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/animation-with-motion) | [Codepen](https://codepen.io/HenryZarza/full/xxVyEpB) |
 | 16 | Parallax | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/parallax) | [Codepen](https://codepen.io/HenryZarza/full/oNxaMwE) |
+| 17 | Ratings with CSS-mask | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/ratings) | [Codepen](https://codepen.io/HenryZarza/full/OJJxPXW) |
