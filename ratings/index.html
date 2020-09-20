@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ratings</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1 class="title">Ratings with CSS-Mask</h1>
+    <main class="card-container">
+      <div class="card icon-container stars">
+        <div class="icon star"></div>
+        <span class="base-text"> <span id="star-text">4.3</span>/5 </span>
+        <input class="range" name="stars" type="range" min="0" max="5" step="0.1" value="4.3" />
+      </div>
+      <div class="card hearts">
+        <div class="icon heart"></div>
+        <span class="base-text"> <span id="heart-text">3</span>/5 </span>
+        <input class="range" name="hearts" type="range" min="0" max="5" step="1" value="3" />
+      </div>
+      <div class="card cars">
+        <div class="icon car"></div>
+        <span class="base-text"> <span id="car-text">5</span>/5 </span>
+        <input class="range" name="cars" type="range" min="0" max="5" step="0.2" value="5" />
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
