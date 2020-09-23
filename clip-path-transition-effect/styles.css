@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+  --cod-gray: #191919;
+  --white: #FFF;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cod-gray);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.big-title {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 700;
+  left: 0;
+  line-height: 1.2;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  top: 2rem;
+}
+
+.element {
+  background: url('https://images.unsplash.com/photo-1593331169420-df43c4f297d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80')
+  center / cover no-repeat;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  padding-left: 10vw;
+  padding-top: 10vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.element:hover {
+  z-index: 1;
+}
+
+.element:first-of-type {
+  clip-path: circle(9rem at 20% center);
+  transition: clip-path 800ms ease-in-out;
+}
+
+.element:nth-of-type(2) {
+  background-image: url('https://images.unsplash.com/photo-1593331170387-0007ce3b3584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  transform: scale(0.25, 0.3);
+  transition: transform 900ms ease-in-out, clip-path 400ms ease-in;
+}
+
+.element:last-of-type {
+  background-image: url('https://images.unsplash.com/photo-1596775878047-7dfbce921efd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: translateX(30%) scale(0.25, 0.35);
+  transition: transform 900ms ease-in-out, clip-path 400ms ease-in;
+}
+
+.content {
+  backdrop-filter: blur(0.2rem);
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 28rem;
+  opacity: 0;
+  padding: 1.5rem;
+  transition: opacity 300ms ease-in-out 550ms;
+  width: 100%;
+}
+
+.title {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+/* Effects */
+.element:first-of-type:active {
+  clip-path: circle(100vw at center);
+}
+
+.element:nth-of-type(2):active {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
+  transform: scale(1, 1);
+}
+
+.element:last-of-type:active {
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+  transform: translateX(0) scale(1, 1);
+}
+
+.element:active .content {
+  opacity: 1;
+}
