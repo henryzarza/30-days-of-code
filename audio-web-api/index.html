@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio API</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section class="cellphone">
+      <h6 class="description">Test using AudioContext API</h6>
+      <audio
+        src="https://res.cloudinary.com/henryzarza/video/upload/v1600820782/General%20assets/Applause_k6d6ch.mp3"
+        crossorigin="anonymous"
+      ></audio>
+      <div class="cover-container" id="cover-container">
+        <img
+          class="cover"
+          src="https://upload.wikimedia.org/wikipedia/en/3/39/Artpop_cover.png"
+          alt="Artpop by Lady Gaga"
+        />
+      </div>
+      <div class="info-container">
+        <h2 class="title">Applause</h2>
+        <h3 class="artist">Lady Gaga</h3>
+        <h5 class="album">ARTPOP</h5>
+        <div class="controls-container">
+          <button type="button" role="button" class="control">
+            <i class="fas fa-step-backward"></i>
+          </button>
+          <input class="play-check" type="checkbox" name="play" id="playCheck" />
+          <label for="playCheck"><i class="fas fa-play" id="icon-play"></i></label>
+          <button type="button" role="button" class="control">
+            <i class="fas fa-step-forward"></i>
+          </button>
+        </div>
+        <label for="volume" class="label-slider">Vol</label>
+        <input type="range" id="volume" class="slider" min="0" max="2" value="1" step="0.01" />
+        <label for="panner" class="label-slider">Pan</label>
+        <input type="range" id="panner" class="slider" min="-1" max="1" value="0" step="0.01" />
+      </div>
+    </section>
+    <script src="https://kit.fontawesome.com/4082acb28c.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
