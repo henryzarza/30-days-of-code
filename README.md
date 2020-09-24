@@ -27,3 +27,4 @@ I decided to do this challenge to practice, improve, and learn new things about 
 | 18 | Mix-blend-mode interaction | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/mix-blend-mode-interaction) | [Codepen](https://codepen.io/HenryZarza/full/abNQKRz) |
 | 19 | AudioContext API | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/audio-web-api) | [Codepen](https://codepen.io/HenryZarza/full/vYGvWLm) |
 | 20 | Clip-path transition effect | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/clip-path-transition-effect) | [Codepen](https://codepen.io/HenryZarza/full/ExKGqBL) |
+| 21 | Micro-interactions with Mo.js | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/microinteractions) | [Codepen](https://codepen.io/HenryZarza/full/dyMaQyo) |
