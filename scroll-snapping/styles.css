@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+:root {
+  --cerulean: #03A9F4;
+  --cod-gray: #191919;
+  --sundown: #FFB7BC;
+  --white: #FFF;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+.main {
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.section {
+  height: 100vh;
+  min-width: 100vw;
+  padding: 1rem;
+  position: relative;
+  scroll-snap-align: start;
+}
+
+/* Section 1 */
+.nature-video {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.title {
+  align-items: center;
+  background-color: var(--white);
+  color: var(--cod-gray);
+  display: flex;
+  font-size: 20vw;
+  font-weight: 900;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  mix-blend-mode: screen;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+}
+
+.icon {
+  animation: goToRight 350ms ease-in alternate infinite;
+  bottom: 1rem;
+  color: var(--cod-gray);
+  font-size: 2rem;
+  position: absolute;
+  right: 2rem;
+  z-index: 1;
+}
+
+@keyframes goToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(0.9rem);
+  }
+}
+/* End section 1 */
+
+/* Section 2 */
+.section:nth-of-type(2) {
+  background-color: var(--sundown);
+}
+
+.section:nth-of-type(2) .title {
+  background: var(--sundown)
+  url('https://images.unsplash.com/photo-1600996970262-33235ddc458a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80')
+  100% / cover no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  mix-blend-mode: unset;
+  -webkit-text-stroke: 1px var(--cod-gray);
+}
+/* End section 2 */
+
+/* Section 3 */
+.section:nth-of-type(3) {
+  background: var(--white)
+  url('https://images.unsplash.com/photo-1498898733745-c8c6df58e4ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2389&q=80')
+  100% / cover no-repeat;
+}
+
+.title-animation {
+  color: var(--cerulean);
+  font-size: 18vw;
+  left: 0;
+  line-height: 1;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transform: translateY(100%);
+}
+
+.title-animation:first-of-type {
+  animation: wave 4s ease-in-out infinite;
+}
+
+.title-animation:last-of-type {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--cerulean);
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    clip-path: polygon(
+    0% 45%,
+    15% 44%,
+    32% 50%,
+    54% 60%,
+    70% 61%,
+    84% 59%,
+    100% 52%,
+    100% 100%,
+    0 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+    0 60%,
+    16% 65%,
+    34% 66%,
+    51% 62%,
+    67% 50%,
+    84% 45%,
+    100% 64%,
+    100% 100%,
+    0 100%
+    );
+  }
+}
+/* End section 3 */
