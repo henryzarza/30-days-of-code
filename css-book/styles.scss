@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+// Variables
+$book-height: 272px;
+$book-width: 216px;
+$dusty-grey: #999;
+$white: #FFF;
+$westar: #E1DDD8;
+$bridal-heath: #FFFBF6;
+$island-spice: #FFFBEC;
+$dove-grey: #666;
+$text-big: 22px;
+$text-medium: 16px;
+$text-small: 12px;
+
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $bridal-heath;
+  padding: 2rem;
+}
+
+.books-container {
+  align-items: center;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 900px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+// Book effect
+@mixin generalPositions() {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.book {
+  height: $book-height;
+  perspective: 1000px;
+  width: $book-width;
+
+  &:hover {
+    & > .book-front {
+      transform: rotateY(-145deg) translateZ(0);
+      z-index: 0;
+    }
+    & > .book-pages div {
+      &:nth-child(1) {
+        transform: rotateY(-30deg);
+        transition-duration: 1.5s;
+      }
+      &:nth-child(2) {
+        transform: rotateY(-35deg);
+        transition-duration: 1.8s;
+      }
+      &:nth-child(3) {
+        transform: rotateY(-118deg);
+        transition-duration: 1.6s;
+      }
+      &:nth-child(4) {
+        transform: rotateY(-130deg);
+        transition-duration: 1.4s;
+      }
+      &:nth-child(5) {
+        transform: rotateY(-140deg);
+        transition-duration: 1.2s;
+      }
+    }
+  }
+}
+
+.book-cover {
+  height: 100%;
+  width: 100%;
+}
+
+.book-front {
+  @include generalPositions();
+  transform: rotateY(-34deg) translateZ(-6px);
+  transform-origin: 0 100%;
+  transition: all 800ms ease;
+  z-index: 10;
+
+  & div {
+    @include generalPositions();
+
+    &:first-child,
+    &:last-child {
+      &::before {
+        background-color: $dusty-grey;
+        content: '';
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    &:first-child {
+      backface-visibility: hidden;
+      background-color: $white;
+      transform: translateZ(2px);
+      user-select: none;
+
+      &::after {
+        background-color: $dusty-grey;
+        content: '';
+        height: 100%;
+        left: -4px;
+        position: absolute;
+        top: 0;
+        width: 4px;
+      }
+
+      &::before {
+        height: 100%;
+        transform: rotateY(90deg) translateZ(214px);
+        width: 6px;
+      }
+    }
+
+    &:last-child {
+      background-color: $island-spice;
+      transform: rotateY(180deg) translateZ(2px);
+
+      &::before {
+        box-shadow: 0 -30px 30px 14px rgba(0, 0, 0, 0.3);
+        height: 80%;
+        transform: rotateX(90deg) rotateZ(90deg) translateZ(-170px) translateX(-20px)
+        translateY(-70px);
+      }
+    }
+  }
+}
+
+.book-pages {
+  @include generalPositions();
+  left: 3%;
+  max-height: 98%;
+  top: 1%;
+  z-index: 5;
+
+  div {
+    background: linear-gradient(to right, $westar, $bridal-heath);
+    border-radius: 0 8px 8px 0;
+    box-shadow: inset 0 -1px 2px rgba(50, 50, 50, 0.1), inset -1px 0 1px rgba(150, 150, 150, 0.2);
+    @include generalPositions();
+    transform-origin: left center;
+    transition-property: transform;
+    transition-timing-function: ease;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        transform: rotateY(-#{26 + ($i * 2)}deg);
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(5) {
+      transition-duration: 600ms;
+    }
+    &:nth-child(3) {
+      transition-duration: 400ms;
+    }
+    &:nth-child(4) {
+      transition-duration: 500ms;
+    }
+
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      padding: $text-medium;
+    }
+  }
+}
+
+.book-back {
+  background-color: $island-spice;
+  @include generalPositions();
+  transform: rotateY(-15deg) translateZ(-8px);
+  transform-origin: 0 100%;
+
+  &::after,
+  &::before {
+    background-color: $dusty-grey;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &::before {
+    height: 100%;
+    transform: rotateY(90deg) translateZ(210px) translateX(2px);
+    width: 15px;
+  }
+
+  &::after {
+    box-shadow: 10px 1px 80px 20px $dove-grey;
+    top: 100%;
+    transform: rotateX(90deg) rotateZ(18deg) translateZ(8px) translateX(34px) translateY(82px);
+    width: 90%;
+  }
+}
+
+.title {
+  font-size: $text-big;
+  font-weight: 700;
+  margin-bottom: $text-small / 2;
+}
+
+.author {
+  font-size: $text-medium;
+  font-weight: 700;
+  margin-bottom: $text-small / 2;
+}
+
+.summary {
+  @extend .author;
+
+  font-weight: 400;
+  overflow-y: auto;
+}
+
+.year {
+  font-size: $text-small;
+  font-weight: 300;
+  margin-bottom: $text-small / 2;
+}
