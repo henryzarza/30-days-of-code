@@ -30,3 +30,4 @@ I decided to do this challenge to practice, improve, and learn new things about 
 | 21 | Micro-interactions with Mo.js | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/microinteractions) | [Codepen](https://codepen.io/HenryZarza/full/dyMaQyo) |
 | 22 | Scroll snap & Text effects | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/scroll-snapping) | [Codepen](https://codepen.io/HenryZarza/full/WNwmpEq) |
 | 23 | Egypt Landing Page | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/egypt-parallax) | [Codepen](https://codepen.io/HenryZarza/full/ExKMdOe) |
+| 24 | CSS Book Effect | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/css-book) | [Codepen](https://codepen.io/HenryZarza/full/dyMLoPK) |
