@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFFBF6;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.main {
+  background: url('https://hipertextual.com/files/2018/01/John-Wick.jpg') center / cover no-repeat;
+  cursor: url('https://res.cloudinary.com/henryzarza/image/upload/v1601335316/General%20assets/aim_y1dc0l.png'),
+  pointer;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.bullet {
+  background: url('https://res.cloudinary.com/henryzarza/image/upload/v1601335316/General%20assets/hole_cjnult.png')
+  100% center / cover no-repeat;
+  height: 2.5rem;
+  pointer-events: none;
+  position: absolute;
+  transform: translate(0.2rem, 0.2rem);
+  width: 2.5rem;
+}
