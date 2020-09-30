@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@1,600&display=swap');
+
+:root {
+  --balloon-dimesion: 5rem;
+  --bridal-heath: #FFFBF6;
+  --cod-gray: #1A1C25;
+  --white: #FFF;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Cormorant Infant', serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: var(--bridal-heath);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+}
+
+canvas {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.title {
+  color: var(--cod-gray);
+  font-size: 10rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  width: 33rem;
+}
+
+/* Balloons */
+.balloon {
+  animation: balloonMovement 8s linear infinite;
+  background-color: #00FF80;
+  border-radius: 50% 50% 15% 50%;
+  bottom: calc(var(--balloon-dimesion) * -1);
+  height: var(--balloon-dimesion);
+  left: 0;
+  opacity: 0.9;
+  pointer-events: none;
+  position: fixed;
+  transform: rotateZ(45deg);
+  width: var(--balloon-dimesion);
+}
+
+.balloon::before {
+  background-image: radial-gradient(
+  circle,
+  rgba(255, 255, 255, 0.7) 0%,
+  rgba(255, 255, 255, 0.1) 100%
+  );
+  border-radius: 50%;
+  content: '';
+  height: 25%;
+  left: 15%;
+  position: absolute;
+  top: 45%;
+  width: 10%;
+}
+
+.balloon::after {
+  background-color: inherit;
+  border-radius: 22%;
+  content: '';
+  height: 5%;
+  left: 90%;
+  position: absolute;
+  top: 94%;
+  transform: rotateZ(-45deg);
+  width: 13%;
+}
+
+@keyframes balloonMovement {
+  0% {
+    transform: rotateZ(45deg) translate(0, 0);
+  }
+  35% {
+    transform: rotateZ(45deg) translate(-18rem, -50vh);
+  }
+  100% {
+    transform: rotateZ(45deg) translate(-48rem, -70vh);
+  }
+}
