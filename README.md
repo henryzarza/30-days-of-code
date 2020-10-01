@@ -34,3 +34,4 @@ I decided to do this challenge to practice, improve, and learn new things about 
 | 25 | Images Effects | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/images-effects) | [Codepen](https://codepen.io/HenryZarza/full/bGpJmYN) |
 | 26 | Shot Effect | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/shot-effect) | [Codepen](https://codepen.io/HenryZarza/full/mdPYRzE) |
 | 27 | Happy Birthday | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/happy-birthday) | [Codepen](https://codepen.io/HenryZarza/full/rNeENNG) |
+| 28 | Isometric Layout | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/isometric-layout) | [Codepen](https://codepen.io/HenryZarza/full/abNgqNZ) |
