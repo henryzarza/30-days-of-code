@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap');
+
+:root {
+  --blue: #0282F9;
+  --dark-gray: #262626;
+  --gray: #323232;
+  --white: #FFF;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--gray);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.wrap {
+  perspective: 2500px;
+  perspective-origin: 100% 50%;
+  text-align: center;
+}
+
+.cover {
+  background: url('https://i.pinimg.com/originals/f5/de/e8/f5dee8a34cdb2143ad26b80e991d4d61.jpg')
+  center / cover no-repeat;
+  border: 0.15rem solid var(--white);
+  bottom: 0;
+  height: 37.5rem;
+  position: absolute;
+  top: 10%;
+  width: 27.5rem;
+}
+
+.cover::before {
+  background-color: rgba(0, 0, 0, 0.35);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.title {
+  color: var(--white);
+  font-size: 4rem;
+  font-weight: 800;
+  left: -5%;
+  position: absolute;
+  -webkit-text-stroke: 0.15rem var(--dark-gray);
+  top: 30%;
+  transform: rotate(-50deg);
+}
+
+.card-list {
+  height: 150vh;
+  margin-left: 12.5rem;
+  overflow-x: hidden;
+  padding: 10rem 6.25rem 31.25rem 0;
+  scrollbar-width: none;
+  transform: rotateX(35deg) rotateY(3deg) rotateZ(27deg);
+  width: 80%;
+}
+
+.card-list::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  box-shadow: 1.5rem 1.5rem 0.25rem rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  height: 25rem;
+  margin: 1.2rem;
+  max-width: 19rem;
+  overflow: hidden;
+  position: relative;
+  transition: transform 330ms ease-in-out, box-shadow 330ms ease-in-out;
+  width: 100%;
+}
+
+.card__img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card__info {
+  background-color: rgba(0, 0, 0, 0.85);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0;
+  transform: translateY(100%);
+  transition: transform 330ms ease-in-out;
+}
+
+.name {
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 600;
+  left: 0;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0;
+}
+
+.real-name,
+.description {
+  color: var(--blue);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: var(--white);
+}
+
+/* Effect */
+.card:hover {
+  box-shadow: 2.5rem 2.5rem 2.5rem rgba(0, 0, 0, 0.5);
+  transform: translate(0.25rem, -0.25rem);
+}
+
+.card:hover .card__info {
+  transform: translateY(0);
+}
