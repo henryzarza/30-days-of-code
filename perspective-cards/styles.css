@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FAFAFA;
+  padding: 1rem;
+}
+
+.title {
+  color: #262626;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 75vh;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 83rem;
+  overflow-y: auto;
+  perspective: 850px;
+  width: 100%;
+}
+
+.card {
+  box-shadow: 0 1.25rem 3.125rem rgba(0, 0, 0, 0.4);
+  cursor: default;
+  display: flex;
+  flex: 0 1 23rem;
+  flex-direction: column;
+  margin: 1rem;
+  transform: rotateX(60deg) scale(0.7);
+  transition: all 500ms ease-in-out;
+}
+
+.card__img {
+  filter: grayscale(1);
+  height: 15rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  transition: filter 500ms ease-in-out;
+  width: 100%;
+}
+
+.card__title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.card__paragraph {
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.2;
+  padding: 1rem;
+}
+
+/* Effect */
+.card:hover {
+  background-color: var(--bg-color);
+  color: #FFF;
+  transform: rotate(0deg) scale(1);
+}
+
+.card:hover .card__img {
+  filter: grayscale(0);
+}
