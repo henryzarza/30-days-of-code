@@ -36,3 +36,5 @@ I decided to do this challenge to practice, improve, and learn new things about 
 | 27 | Happy Birthday | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/happy-birthday) | [Codepen](https://codepen.io/HenryZarza/full/rNeENNG) |
 | 28 | Isometric Layout | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/isometric-layout) | [Codepen](https://codepen.io/HenryZarza/full/abNgqNZ) |
 | 29 | Perspective cards | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/perspective-cards) | [Codepen](https://codepen.io/HenryZarza/full/jOqgPBR) |
+| 30 | Memory Game | [Github](https://github.com/henryzarza/30-days-of-code/tree/master/memory-game) | [Codepen](https://codepen.io/HenryZarza/full/BaKXdeJ) |
+
